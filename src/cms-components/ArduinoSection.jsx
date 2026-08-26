@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
+import arduinoImg from '../assets/arduino_board.jpg';
 
 const ArduinoSection = () => {
   return (
@@ -29,7 +30,7 @@ const ArduinoSection = () => {
             transition={{ repeat: Infinity, duration: 20, ease: "linear" }}
             className="w-64 h-80 md:w-96 md:h-[28rem] rounded-2xl shadow-2xl flex items-center justify-center relative z-10 overflow-hidden"
           >
-            <img src="/assets/arduino_board.jpg" alt="Arduino Board" className="w-full h-full object-cover mix-blend-multiply" />
+            <img src={arduinoImg} alt="Arduino Board" className="w-full h-full object-cover mix-blend-multiply" />
           </motion.div>
 
           {/* Floating Technical Specs */}

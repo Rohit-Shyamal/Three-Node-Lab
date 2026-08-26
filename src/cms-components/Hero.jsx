@@ -1,6 +1,7 @@
 import React from 'react';
 import { Menu, ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
+import heroImg from '../assets/hero_3d.jpg';
 
 const Hero = ({ onOpenNav }) => {
   return (
@@ -43,7 +44,7 @@ const Hero = ({ onOpenNav }) => {
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
               className="relative z-10 w-64 h-64 md:w-[28rem] md:h-[28rem] rounded-full shadow-2xl border-thin flex items-center justify-center overflow-hidden"
             >
-              <img src="/assets/hero_3d.jpg" alt="Futuristic 3D Arduino" className="w-full h-full object-cover mix-blend-multiply" />
+              <img src={heroImg} alt="Futuristic 3D Arduino" className="w-full h-full object-cover mix-blend-multiply" />
             </motion.div>
             
             {/* Floating Info Cards */}

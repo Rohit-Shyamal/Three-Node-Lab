@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import schoolsImg from '../assets/schools_lab.jpg';
 
 const SchoolsSection = () => {
   return (
@@ -29,7 +30,7 @@ const SchoolsSection = () => {
         <div className="w-full md:w-1/2">
           <div className="aspect-square bg-cms-light-grey rounded-4xl border-thin shadow-2xl relative overflow-hidden flex items-center justify-center">
             {/* Image Placeholder */}
-            <img src="/assets/schools_lab.jpg" alt="STEM Robotics Lab" className="w-full h-full object-cover" />
+            <img src={schoolsImg} alt="STEM Robotics Lab" className="w-full h-full object-cover" />
           </div>
         </div>
 
