@@ -28,7 +28,7 @@ const ProjectsSection = () => {
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="w-full max-w-2xl aspect-video rounded-3xl border-thin shadow-2xl flex items-center justify-center relative z-10 overflow-hidden"
             >
-               <img src={projectImg} alt="Smart Home Automation" className="w-full h-full object-cover" />
+               <img src={projectImg} alt="Smart Home Automation" className="w-full h-full object-cover" loading="lazy" decoding="async" />
             </motion.div>
           </div>
 

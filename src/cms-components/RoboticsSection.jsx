@@ -30,7 +30,7 @@ const RoboticsSection = () => {
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             className="w-full max-w-md aspect-square rounded-full border border-white/50 shadow-2xl flex items-center justify-center relative z-20 overflow-hidden"
           >
-            <img src={roboticsImg} alt="Robotics Arm" className="w-full h-full object-cover mix-blend-multiply" />
+            <img src={roboticsImg} alt="Robotics Arm" className="w-full h-full object-cover mix-blend-multiply" loading="lazy" decoding="async" />
           </motion.div>
 
           {/* Floating Annotations */}
