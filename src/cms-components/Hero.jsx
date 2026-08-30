@@ -1,7 +1,9 @@
 import React from 'react';
 import { Menu, ArrowDown } from 'lucide-react';
 import { motion } from 'framer-motion';
-import heroImg from '../assets/hero_3d.jpg';
+import heroImg from '../assets/hero_robot.jpg';
+
+import { Link } from 'react-router-dom';
 
 const Hero = ({ onOpenNav }) => {
   return (
@@ -22,9 +24,9 @@ const Hero = ({ onOpenNav }) => {
               initial={{ y: 50, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="text-6xl md:text-[8rem] leading-[0.85] font-bold tracking-tighter uppercase text-cms-charcoal"
+              className="text-6xl md:text-[7rem] leading-[0.85] font-bold tracking-tighter uppercase text-cms-charcoal"
             >
-              Turn<br />Ideas<br />Into<br />Real Projects
+              Buy Our<br />Projects.<br />Or Let Us<br />Build Yours.
             </motion.h2>
           </div>
 
@@ -34,7 +36,7 @@ const Hero = ({ onOpenNav }) => {
             {/* Background oversized text */}
             <div className="absolute inset-0 flex items-center justify-center overflow-hidden pointer-events-none z-0 opacity-[0.03]">
               <h1 className="text-[15rem] leading-[0.8] font-bold tracking-tighter uppercase text-cms-black writing-vertical text-center break-words w-min">
-                THREE NODE LAB
+                STORE & SERVICES
               </h1>
             </div>
 
@@ -44,7 +46,7 @@ const Hero = ({ onOpenNav }) => {
               transition={{ repeat: Infinity, duration: 6, ease: "easeInOut" }}
               className="relative z-10 w-64 h-64 md:w-[28rem] md:h-[28rem] rounded-full shadow-2xl border-thin flex items-center justify-center overflow-hidden"
             >
-              <img src={heroImg} alt="Futuristic 3D Arduino" className="w-full h-full object-cover mix-blend-multiply" fetchPriority="high" decoding="sync" />
+              <img src={heroImg} alt="Futuristic STEM Robot" className="w-full h-full object-cover mix-blend-multiply" fetchPriority="high" decoding="sync" />
             </motion.div>
             
             {/* Floating Info Cards */}
@@ -54,9 +56,9 @@ const Hero = ({ onOpenNav }) => {
               transition={{ delay: 0.5 }}
               className="absolute bottom-4 md:bottom-8 left-1/2 -translate-x-1/2 max-w-[220px] p-4 rounded-2xl bg-white/70 backdrop-blur-md border-thin z-20"
             >
-              <h4 className="font-bold text-xs uppercase tracking-widest mb-2">Learn By Building</h4>
+              <h4 className="font-bold text-xs uppercase tracking-widest mb-2">Shop Ready-Made</h4>
               <p className="text-[10px] text-cms-charcoal/80 leading-relaxed font-mono">
-                Hands-on Arduino, robotics and IoT projects designed for practical learning.
+                Buy ready-to-use IoT, robotics, and automation kits directly from our store.
               </p>
             </motion.div>
 
@@ -66,9 +68,9 @@ const Hero = ({ onOpenNav }) => {
               transition={{ delay: 0.7 }}
               className="absolute top-12 right-0 md:right-12 max-w-[220px] p-4 rounded-2xl bg-white/70 backdrop-blur-md border-thin z-20"
             >
-              <h4 className="font-bold text-xs uppercase tracking-widest mb-2">Build With Us</h4>
+              <h4 className="font-bold text-xs uppercase tracking-widest mb-2">Hire Us to Build</h4>
               <p className="text-[10px] text-cms-charcoal/80 leading-relaxed font-mono">
-                Websites, IoT systems, automation and custom technology solutions.
+                Need a custom solution? We build websites, IoT systems, and applications for clients.
               </p>
             </motion.div>
 
@@ -78,14 +80,13 @@ const Hero = ({ onOpenNav }) => {
 
         {/* Right Side Index */}
         <div className="absolute right-8 top-1/2 -translate-y-1/2 hidden lg:flex flex-col gap-6 text-[10px] font-mono uppercase tracking-widest text-cms-charcoal/40 z-20">
-          <div className="flex items-center gap-4 text-cms-charcoal font-bold">
+          <Link to="/store" className="flex items-center gap-4 text-cms-charcoal font-bold hover:text-cms-orange transition-colors">
             <span className="w-4 h-[1px] bg-cms-charcoal"></span>
-            01 — Projects
-          </div>
-          <div className="hover:text-cms-charcoal transition-colors cursor-pointer pl-8">02 — Robotics</div>
-          <div className="hover:text-cms-charcoal transition-colors cursor-pointer pl-8">03 — IoT</div>
-          <div className="hover:text-cms-charcoal transition-colors cursor-pointer pl-8">04 — Books</div>
-          <div className="hover:text-cms-charcoal transition-colors cursor-pointer pl-8">05 — Business</div>
+            01 — Store
+          </Link>
+          <Link to="/services" className="hover:text-cms-charcoal transition-colors cursor-pointer pl-8">02 — Services</Link>
+          <Link to="/services" className="hover:text-cms-charcoal transition-colors cursor-pointer pl-8">03 — B2B Schools</Link>
+          <Link to="/" className="hover:text-cms-charcoal transition-colors cursor-pointer pl-8">04 — About Us</Link>
         </div>
 
         {/* Scroll Indicator */}

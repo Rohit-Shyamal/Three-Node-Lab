@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const FinalCTA = ({ onStartProject }) => {
   return (
@@ -19,11 +20,11 @@ const FinalCTA = ({ onStartProject }) => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-          <button className="px-8 py-4 rounded-full border border-cms-black text-cms-black hover:bg-cms-black hover:text-white transition-all font-mono text-xs uppercase tracking-widest w-full md:w-auto">
-            Explore Projects
-          </button>
+          <Link to="/store" className="px-8 py-4 rounded-full border border-cms-black text-cms-black hover:bg-cms-black hover:text-white transition-all font-mono text-xs uppercase tracking-widest w-full md:w-auto text-center">
+            Shop Products
+          </Link>
           <button onClick={onStartProject} className="px-8 py-4 rounded-full bg-cms-black text-white hover:bg-cms-orange transition-all font-mono text-xs uppercase tracking-widest w-full md:w-auto">
-            Build With Us
+            Hire Us To Build
           </button>
         </div>
       </div>

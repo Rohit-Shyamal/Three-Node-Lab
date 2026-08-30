@@ -22,7 +22,7 @@ const SchoolsSection = () => {
           </div>
 
           <button className="flex items-center gap-4 px-8 py-4 rounded-full border border-cms-black text-cms-black hover:bg-cms-black hover:text-white transition-all">
-            <span className="text-xs font-mono uppercase tracking-widest">Partner With Us</span>
+            <span className="text-xs font-mono uppercase tracking-widest">Request a Quote</span>
             <ArrowRight size={16} />
           </button>
         </div>
